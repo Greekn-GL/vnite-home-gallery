@@ -12,6 +12,17 @@
 .vhg-showcase-active > :not(.vhg), .vhg-compact > :not(.vhg-header) { display: none !important; }
 .vhg.vhg-compact { padding-bottom: 0; }
 
+/* Size the gallery to the library viewport below Vnite's own toolbar. */
+[data-slot='scroll-area-viewport']:has(> div > .vhg-showcase-active) {
+  container-type: size;
+}
+
+.vhg-showcase-active > .vhg {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100cqh - 18px); /* The native showcase has 18px of top padding. */
+}
+
 /* Collapse the native game list and its resize handle while the gallery is expanded. */
 #root .flex.flex-row.w-full.h-full.relative:has(> .flex-1.h-full.relative .vhg-showcase-active)
   > :is(.h-full[style*='width:']:has(+ .cursor-ew-resize), .w-1.h-full.shrink-0.cursor-ew-resize) {
@@ -37,7 +48,8 @@
   position: relative;
   isolation: isolate;
   align-items: flex-end;
-  min-height: clamp(250px, 57vh, 640px);
+  flex: 1 0 auto;
+  min-height: clamp(220px, 44cqh, 400px);
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius, 8px);

@@ -2,7 +2,7 @@
   "id": "local-vnite-home-gallery",
   "name": "今天玩点什么 · 首页展厅",
   "description": "在游戏库首页增加大图展厅和横向游戏封面栏。",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "index.cjs",
   "vniteVersion": "4.14.0",
   "author": "Local",
