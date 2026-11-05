@@ -1,0 +1,35 @@
+{
+  "id": "local-vnite-home-gallery",
+  "name": "今天玩点什么 · 首页展厅",
+  "description": "在游戏库首页增加大图展厅和横向游戏封面栏。",
+  "version": "1.2.0",
+  "main": "index.cjs",
+  "vniteVersion": "4.14.0",
+  "author": "Local",
+  "configuration": [
+    {
+      "id": "recent",
+      "type": "boolean",
+      "title": "按最近游玩日期排序",
+      "description": "优先级 1。最近玩过的游戏排在前面。",
+      "default": true,
+      "controlOptions": { "controlType": "switch" }
+    },
+    {
+      "id": "score",
+      "type": "boolean",
+      "title": "按我的评分排序",
+      "description": "优先级 2。高分排在前面，未评分排在已评分之后。",
+      "default": false,
+      "controlOptions": { "controlType": "switch" }
+    },
+    {
+      "id": "playTime",
+      "type": "boolean",
+      "title": "按游玩时长排序",
+      "description": "优先级 3。累计游玩时长较长的排在前面。全部关闭时按游戏名排序。",
+      "default": false,
+      "controlOptions": { "controlType": "switch" }
+    }
+  ]
+}
